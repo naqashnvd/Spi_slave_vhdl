@@ -8,7 +8,6 @@ The spi_slave module is a VHDL implementation of an SPI (Serial Peripheral Inter
 - [Module Ports](#module-ports)
 - [Module Architecture](#module-architecture)
 - [Usage](#usage)
-- [Simulation](#simulation)
 
 ## Features
 - Configurable data bus width (default: 16 bits).
@@ -65,15 +64,3 @@ The spi_slave module consists of the following components:
 6. Monitor the `m_axis_tdata` and `m_axis_tvalid` signals to receive data from the SPI master.
 
 7. Use the `aresetn` signal for module reset as needed.
-
-## Simulation
-To test and simulate the `spi_slave` module, follow these steps:
-
-1. Create a testbench that instantiates the `spi_slave` module.
-
-2. Provide appropriate clock and reset signals (`clk` and `aresetn`) in your testbench.
-
-3. Stimulate the module by toggling control interface signals (`s_axis_tdata`, `s_axis_tvalid`, and `s_axis_tready`) and monitoring SPI interface signals (`spi_sclk`, `spi_csn`, `spi_mosi`, and `spi_miso`).
-
-4. Observe the behavior of the module and verify its functionality in simulation.
-
